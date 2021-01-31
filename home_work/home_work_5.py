@@ -16,7 +16,7 @@ elif proceeds < costs:
     print(f'Фирма отработала c убытком: {costs - proceeds}')
 
 else:
-    print('Фирма отработала без прибыли и убытков')
+    print('Фирма отработала без прибыли и убытков ')
 
 if profit:
     people = int(input('Введите численость сотрудников:  '))
