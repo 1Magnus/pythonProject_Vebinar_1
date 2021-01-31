@@ -13,5 +13,5 @@ while number:
     if result > max:
         max = result
 
-print(f'Максимальное число: {max}')
+print(f'Максимальная цифра: {max}')
 
