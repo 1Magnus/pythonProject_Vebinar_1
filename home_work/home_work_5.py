@@ -13,7 +13,7 @@ if proceeds > costs:
     print(f'Рентабильность: {round(profit / proceeds, 2)}')
 
 elif proceeds < costs:
-    print(f'Фирма отработала в убыток: {costs - proceeds}')
+    print(f'Фирма отработала c убытком: {costs - proceeds}')
 
 else:
     print('Фирма отработала без прибыли и убытков')

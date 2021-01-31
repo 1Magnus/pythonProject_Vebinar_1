@@ -10,6 +10,6 @@ day = 1
 
 while a < b:
     a += a * 0.1
-    print(round(a, 2))
+    #print(round(a, 2))
     day += 1
 print(f'Результат будет достигнут через {day} дней')
