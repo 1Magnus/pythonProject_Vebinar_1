@@ -8,6 +8,7 @@
 
 
 my_list = [7, 5, 3, 3, 2]
+print(f'Исходный список Рейтинга: {my_list}')
 # Решение через Sort.
 # number = True
 # while number:
@@ -22,10 +23,9 @@ while True:
     if number.isdigit():
         number = int(number)
         break
-    print("Необходимо ввести число")
+    print("Необходимо ввести положительно число")
 
 chek = True
-
 for i in range(len(my_list)):
     if number > my_list[i]:
         my_list.insert(i, number)

@@ -3,9 +3,8 @@
 
 user_list = input('Введите слова через пробел: ')
 user_list = user_list.split()
-print(f'Ваш список: {user_list}')
-my_list = []
 
+my_list = []
 for i in user_list:
     if len(i) > 10:
         i = i[:10]

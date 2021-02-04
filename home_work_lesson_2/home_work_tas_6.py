@@ -5,12 +5,14 @@
 # Необходимо собрать аналитику о товарах. Реализовать словарь, в котором каждый ключ — характеристика товара, например
 # название, а значение — список значений-характеристик, например список названий товаров.
 
-all_list = []
-characteristics_dicts = []
-# Так как в задании написано чет все данные заправшиваем у пользователя, значение ключей вводиться тоже с клавиатуры
-quantity = int(input('Программа "Товары", для заполнения используйте пример \n'
-                     '"название компьютер цена 20000 количество 5 eд шт." \n'
+
+
+# Так как в задании написано что все данные заправшиваем у пользователя, значение ключей вводиться тоже с клавиатуры
+quantity = int(input('Программа "Товары", для заполнения используйте пример: \n'
+                     'название компьютер цена 20000 количество 5 eд шт. \n'
                      'Укажите количество товаров: '))
+
+characteristics_dicts = []
 for i in range(quantity):
     user_answer = input('Введите характериситики товара через пробел: ')
     my_list = user_answer.split()
@@ -19,13 +21,14 @@ for i in range(quantity):
 
 print('*' * 150)
 
+all_list = []
 for i in enumerate(characteristics_dicts, 1):
     all_list.append(i)
 print(all_list)
 
 print('*' * 150)
 
-analitic_dict = {}
+analytic_dict = {}
 characters_in_mas = []
 all_key = my_dict.keys()
 for key in all_key:
@@ -33,6 +36,6 @@ for key in all_key:
         character_in_mas = mas.get(key)
         characters_in_mas.append(character_in_mas)
 
-    analitic_dict[key] = characters_in_mas
+    analytic_dict[key] = characters_in_mas
     characters_in_mas = []
-print(analitic_dict)
+print(analytic_dict)
