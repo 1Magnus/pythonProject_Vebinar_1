@@ -11,7 +11,4 @@ for k in range(len(my_list)):
     if k % 2 != 0:
         my_list[k], my_list[k - 1] = my_list[k - 1], my_list[k]
 
-
 print(f'Новый список: {my_list}')
-
-
