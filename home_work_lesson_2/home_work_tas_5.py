@@ -8,6 +8,7 @@
 
 
 my_list = [7, 5, 3, 3, 2]
+# Решение через Sort.
 # number = True
 # while number:
 #  number = int(input('Введите новый элемент рейтинга: '))
