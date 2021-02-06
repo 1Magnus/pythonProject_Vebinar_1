@@ -28,4 +28,5 @@ for i in user_list:
     word = int_func(i)
     final_list.append(word)
 
-print(f' Результат - {final_list}')
+final_str = ' '.join(final_list)
+print(f'Результат - {final_str}')
