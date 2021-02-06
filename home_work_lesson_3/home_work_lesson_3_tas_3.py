@@ -17,5 +17,5 @@ while True:
         number3 = int(number3)
         break
     print("Необходимо ввести числа")
-
-print(my_func(number1, number2, number3))
+result = my_func(number1, number2, number3)
+print(f'Сумма двух наибольших чисел = {result}')
