@@ -5,10 +5,9 @@ def int_func(text):
     total = 0
     for letter in text:
         code_letter = ord(letter)
-        if code_letter in range(97, 122):
-            total += 0
-        else:
+        if code_letter not in range(97, 122):
             total += 1
+
     if total == 0:
         return text.title()
     else:
