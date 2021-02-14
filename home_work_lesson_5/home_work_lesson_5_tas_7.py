@@ -35,4 +35,5 @@ finish_list.append(finish_dict_2)
 print(finish_list)
 
 with open('text_7.json', 'w', encoding='utf-8') as f_2:
-    json.dump(f'{finish_list}\n', f_2)
+    json.dump(finish_list, f_2, sort_keys=False, indent=4, ensure_ascii=False, separators=(',', ': '))
+
