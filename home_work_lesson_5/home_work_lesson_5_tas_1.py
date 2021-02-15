@@ -7,3 +7,4 @@ with open('text.txt', 'w', encoding='utf-8') as f:
         user_text = input('Введите текст: ')
         f.writelines(f'{user_text} \n')
 
+

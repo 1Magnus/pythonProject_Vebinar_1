@@ -4,7 +4,7 @@ import random
 
 n = 10
 with open('text_5.txt', 'a', encoding='utf-8') as f_2:
-    number = [random.randint(1, 100) for el in range(5)]
+    number = [random.randint(1, 100) for el in range(n)]
     for i in number:
         print(i, file=f_2, end=' ')
 
