@@ -39,8 +39,8 @@ class TownCar(Auto):
 
 class SportCar(Auto):
     def __init__(self, color, name, speed=0, is_police=False):
-        super().__init__(color, name, speed)
-        self.is_police = is_police
+        super().__init__(color, name, speed, is_police)
+
 
 
 class WorkCar(Auto):
