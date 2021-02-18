@@ -5,18 +5,18 @@
 # метода.
 # Например: 20м * 5000м * 25кг * 5см = 12500 т
 
-class Road():
-    massa = 25
+class Road:
+    mass = 25
     thickness = 5
 
     def __init__(self, length, width):
         self._length = length
         self._width = width
 
-    def calculation_masss(self):
-        mass = self._length * self._width * self.massa * self.thickness
-        print(f'Масса асфальта необходимого дя покрытя всего дорожного полотна = {int(mass/1000)} т')
+    def calculation_mass(self):
+        mass = self._length * self._width * self.mass * self.thickness
+        print(f'Масса асфальта необходимого дя покрытя всего дорожного полотна = {int(mass / 1000)} т')
 
 
-road_1 =Road(5000, 20)
-road_1.calculation_masss()
+road_1 = Road(5000, 20)
+road_1.calculation_mass()

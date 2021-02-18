@@ -17,7 +17,7 @@ def switch_color(text):
         return print("\033[32m {}".format(text))
 
 
-class TrafficLight():
+class TrafficLight:
     __color = {'RED': 7, 'YELLOW': 2, 'GREEN': 7}
 
     def running(self):

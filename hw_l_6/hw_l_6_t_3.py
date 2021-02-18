@@ -5,7 +5,7 @@
 # Проверить работу примера на реальных данных (создать экземпляры класса Position, передать данные, проверить значения
 # атрибутов, вызвать методы экземпляров)
 
-class Worker():
+class Worker:
 
     def __init__(self, name, surname, position, wage, bonus):
         self.name = name

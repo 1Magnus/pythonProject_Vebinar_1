@@ -6,8 +6,8 @@
 # скорости.# Создайте экземпляры классов, передайте значения атрибутов. Выполните доступ к атрибутам, выведите
 # результат. Выполните вызов методов и также покажите результат.
 
-class Auto():
-    def __init__(self, color, name, is_police=False, speed=0):
+class Auto:
+    def __init__(self, color, name, speed=0, is_police=False):
         self.speed = speed
         self.color = color
         self.name = name
@@ -27,7 +27,7 @@ class Auto():
 
 
 class TownCar(Auto):
-    def __init__(self, color, name, is_police=True, speed=0):
+    def __init__(self, color, name, speed=0, is_police=False):
         super().__init__(color, name, is_police, speed)
 
     def show_speed(self):
@@ -38,13 +38,13 @@ class TownCar(Auto):
 
 
 class SportCar(Auto):
-    def __init__(self, color, name, is_police=True, speed=0):
+    def __init__(self, color, name, speed=0, is_police=False):
         super().__init__(color, name, speed)
         self.is_police = is_police
 
 
 class WorkCar(Auto):
-    def __init__(self, color, name, is_police=True, speed=0):
+    def __init__(self, color, name, speed=0, is_police=False):
         super().__init__(color, name, is_police, speed)
 
     def show_speed(self):
@@ -55,7 +55,7 @@ class WorkCar(Auto):
 
 
 class PoliceCar(Auto):
-    def __init__(self, color, name, is_police=True, speed=0):
+    def __init__(self, color, name, speed=0, is_police=True):
         super().__init__(color, name, speed)
         self.is_police = is_police
 
