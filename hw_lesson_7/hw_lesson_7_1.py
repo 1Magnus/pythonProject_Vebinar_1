@@ -13,10 +13,9 @@ class Matrix:
         self.matrix = matrix
 
     def __str__(self):
-        result = None
-        summers = str()
+        summers = ''
         for list_matrix in self.matrix:
-            result = '  '.join(map(str, list_matrix)) + '\n'
+            result = '\t'.join(map(str, list_matrix)) + '\n'
             summers = summers + result
         return summers
 
@@ -39,7 +38,7 @@ class Matrix:
         return Matrix(result_matrix)
 
 
-matrix_1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matrix_1 = Matrix([[1, 2, 3], [4, 225, 6], [7, 228, 9]])
 matrix_2 = Matrix([[1, 2, 3], [4, 5, 6]])
 matrix_3 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 print(matrix_1)
