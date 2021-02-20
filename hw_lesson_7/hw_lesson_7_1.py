@@ -13,12 +13,16 @@ class Matrix:
     def __init__(self, matrix):
         self.matrix = matrix
 
+    # =================================================================================================================
+
     def __str__(self):
         summers = ''
         for list_matrix in self.matrix:
             result = '\t'.join(map(str, list_matrix)) + '\n'
             summers = summers + result
         return summers
+
+    # =================================================================================================================
 
     def __add__(self, other):
         line = len(self.matrix)
@@ -28,6 +32,7 @@ class Matrix:
         result_list = []
         result_matrix = []
         if line == line_other and column == column_other:
+
             for line_matrix in range(line):
                 for numb_el_line in range(column):
                     result = self.matrix[line_matrix][numb_el_line] + other.matrix[line_matrix][numb_el_line]
@@ -37,11 +42,22 @@ class Matrix:
         else:
             return 'Матрицы не равны!'
         return Matrix(result_matrix)
+    # =================================================================================================================
 
 
-matrix_1 = Matrix([[1, 2, 3], [4, 225, 6], [7, 228, 9]])
-matrix_2 = Matrix([[1, 2, 3], [4, 5, 6]])
-matrix_3 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matrix_1 = Matrix([[1, 2, 3],
+                   [4, 225, 6],
+                   [7, 228, 9]])
+
+matrix_2 = Matrix([[1, 2, 3],
+                   [4, 5, 6]])
+
+matrix_3 = Matrix([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+
+# =================================================================================================================
+
 print(matrix_1)
 print(matrix_2)
 print(matrix_3)

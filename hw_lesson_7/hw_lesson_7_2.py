@@ -12,17 +12,27 @@ from abc import abstractmethod
 class Clothes:
     cloth_all = 0
 
+    # =================================================================================================================
     def __init__(self, param):
         self.param = param
-        result = self.cloth_counting
-        Clothes.summon_cloth(self, result)
+        Clothes.summon_cloth(self, self.cloth_counting)
+
+    # =================================================================================================================
 
     @abstractmethod
     def cloth_counting(self):
         pass
+
+    # =================================================================================================================
     # Функция подсчитывает сколько всего надо ткани на всю одежду и сохранит в параметр .cloth_all
     def summon_cloth(self, result):
         Clothes.cloth_all += result
+
+    # =================================================================================================================
+    def __str__(self):
+        return f'Ткани для обьекта = {round(self.cloth_counting)}. Всего ткани = {round(self.cloth_all)}'
+
+    # =================================================================================================================
 
 
 class Coat(Clothes):
@@ -34,6 +44,7 @@ class Coat(Clothes):
         except ValueError:
             return f'Неверное значение {self.param}'
 
+    # =================================================================================================================
 
 class Costume(Clothes):
     # Функция покажет сколько надо ткани непосредственно для костюма
@@ -44,17 +55,24 @@ class Costume(Clothes):
         except ValueError:
             print(f'Неверное значение {self.param}')
 
+    # =================================================================================================================
 
 coat_1 = Coat(58)
-print(coat_1.cloth_counting)
-print(coat_1.cloth_all)
-print('*' * 40)
+print(coat_1)
+
+print('*' * 50)
+
+coat_2 = Coat(40)
+print(coat_2)
+
+print('*' * 50)
 
 costume_1 = Costume(190)
-print(costume_1.cloth_counting)
-print(costume_1.cloth_all)
-print('*' * 40)
+print(costume_1)
+
+print('*' * 50)
 
 costume_2 = Costume(180)
-print(costume_2.cloth_all)
-print('*' * 40)
+print(costume_2)
+
+print('*' * 50)

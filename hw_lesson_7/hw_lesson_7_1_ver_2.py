@@ -13,6 +13,8 @@ class Matrix:
     def __init__(self, matrix):
         self.matrix = matrix
 
+    # =================================================================================================================
+
     def __str__(self):
         summers = ''
         new_list_matrix = []
@@ -20,7 +22,7 @@ class Matrix:
         max_len = max([len(str(e)) for r in self.matrix for e in r]) + 3
         for list_matrix in self.matrix:
             for cir in list_matrix:
-                new_cir = str(cir).rjust(max_len)
+                new_cir = str(cir).ljust(max_len)
                 new_list_matrix.append(new_cir)
             new_matrix.append(new_list_matrix)
             new_list_matrix = []
@@ -30,7 +32,7 @@ class Matrix:
             summers = summers + result
         return summers
 
-
+    # =================================================================================================================
 
     def __add__(self, other):
         line = len(self.matrix)
@@ -49,11 +51,22 @@ class Matrix:
         else:
             return 'Матрицы не равны!'
         return Matrix(result_matrix)
+    # =================================================================================================================
 
 
-matrix_1 = Matrix([[9, 8123, 7], [6, 54465464, 4], [3, 2, 1]])
-matrix_2 = Matrix([[1, 2, 3], [4, 5, 6]])
-matrix_3 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matrix_1 = Matrix([[9, 8123, 7],
+                   [6, 54465464, 4],
+                   [3, 2, 1]])
+
+matrix_2 = Matrix([[1, 2, 3],
+                   [4, 5, 6]])
+
+matrix_3 = Matrix([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+
+# =================================================================================================================
+
 print(matrix_1)
 print(matrix_2)
 print(matrix_3)
