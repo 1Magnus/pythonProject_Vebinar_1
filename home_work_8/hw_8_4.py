@@ -58,7 +58,6 @@ class Warehouse:
     @classmethod
     def reception(cls, obj, division):
         try:
-
             result = cls.all_division.setdefault(division)
             result = check_list(result)
             if (obj not in result) and (obj in cls.all_obj):

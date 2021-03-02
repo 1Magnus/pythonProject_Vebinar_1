@@ -17,7 +17,7 @@ class ComplexNumbers:
         return ComplexNumbers(result.real, result.imag)
 
     def __str__(self):
-        return f"Комплексное число {self.complex_numb}"
+        return f"Комплексное число - {self.complex_numb}"
 
 
 complex_1 = ComplexNumbers(1, 2)

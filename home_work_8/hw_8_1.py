@@ -5,10 +5,21 @@
 import time
 
 
+class MyException(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
 class Data:
 
     def __init__(self, data_str):
-        self.data_str = str(data_str)
+        try:
+            if (type(data_str) is str) and (data_str.count('-') == 2):
+                self.data_str = data_str
+            else:
+                raise MyException('Необходимо ввести строку в формате: «день-месяц-год»')
+        except MyException as err:
+            print(err)
 
     @classmethod
     def extracts_number(cls, param):
@@ -25,6 +36,7 @@ class Data:
 
 
 data_1 = Data('28-02-2021')
+data_2 = Data(29022020)
 print(data_1.extracts_number(data_1.data_str))
 print(data_1.date_check(data_1.data_str))
 
@@ -33,3 +45,4 @@ print(Data.date_check('28-02-2021'))
 print(Data.date_check('31-02-2021'))
 print(Data.date_check('11-13-2021'))
 print(Data.date_check('28-02-22222'))
+
